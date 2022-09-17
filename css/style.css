@@ -1,10 +1,18 @@
+html {
+    zoom: 80%;
+}
+
 body {
     font-family: 'Source Code Pro';
     background-color: rgba(0, 0, 0, 0.05);
     margin: 0;
     padding: 0;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
+}
+
+.page {
+    width: 100%;
 }
 
 .page header {
@@ -13,9 +21,14 @@ body {
     padding: 16px;
 }
 
-.page main section {
-    padding: 16px;
+.page main, .page header #title {
+    width: 90%;
+    margin: 0 auto;
 }
+
+/*.page main section {
+    padding: 16px;
+}*/
 
 .page main section h2 {
     text-align: center;
@@ -23,16 +36,16 @@ body {
 
 .page main section .main-content {
     display: flex;
-}
-
-.page main section .main-content .card {
-    display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     align-content: center;
     align-items: center;
-    flex: 4;
-    margin: 16px;
+}
+
+.page main section .main-content .card {
+    width: 100%;
+    flex: 20%;
+    margin: 32px;
     border: 2px solid grey;
     box-shadow: 6px 5px 11px grey;
 }
@@ -67,7 +80,31 @@ body {
 .page footer {
     position: absolute;
     bottom: 0;
-    width: 100%;
+    width: inherit;
+    padding-bottom: 32px;
     text-align: center;
 }
 
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .page main section .main-content {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 1235px) {
+    /* For tablets and mini desktops: */
+ /*   .page main, .page header #title {
+        width: 100%;
+    }*/
+
+    .page main section .main-content .card {
+        flex: 40%;
+    }
+
+    .page footer {
+        position: relative;
+        width: 100%;
+        text-align: center;
+    }
+}
