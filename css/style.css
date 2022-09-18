@@ -26,9 +26,23 @@ body {
     margin: 0 auto;
 }
 
-/*.page main section {
-    padding: 16px;
-}*/
+.page header #title {
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.page header #title img {
+    width: 64px;
+    height: 64px;
+    position: relative;
+    top: 8px;
+}
+
+.page header #title h1 {
+    margin-left: 16px;
+}
 
 .page main section h2 {
     text-align: center;
@@ -89,6 +103,13 @@ body {
     /* For mobile phones: */
     .page main section .main-content {
         flex-direction: column;
+    }
+
+    .page header #title h1 {
+        margin-left: 16px;
+        font-size: 1.2rem;
+        position: relative;
+        top: 16px;
     }
 }
 
